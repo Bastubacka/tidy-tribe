@@ -17,7 +17,10 @@ class DefaultController extends Controller
         //return $this->render('default/index.html.twig', array(
         //    'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
         //));
-        return $this->render('<html><body>Tidy Tribe</body></html>');
+        return new Response(
+            '<html><body>Lucky number: '.$number.'</body></html>'
+                );
+
         
     }
 }
